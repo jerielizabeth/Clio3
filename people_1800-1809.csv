@@ -1,0 +1,177 @@
+PK_People,personID,personName 1,gender,personYear,deathYear
+82,Bennett_A,A. Bennett,M,1805,1830
+83,Burckhardt_A,Abel Burckhardt,M,1805,1882
+44,Thomas_AC1,A. C. Thomas,M,1807,1880
+1,Lincoln_Abraham,Abraham Lincoln,M,1809,1865
+112,Adam_AC,Adolphe C. Adam,M,1803,1856
+139,Means_A,Alexander Means,M,1801,1883
+2,Tennyson_A,Alfred Tennyson,M,1809,1892
+19,Chatfield_AW,Allen W. Chatfield,M,1808,1896
+140,Berggren_AP,Andreas Peter Berggren,M,1801,1880
+45,Young_A,Andrew Young,M,1807,1889
+3,Shepherd_AH,Anne H. Shepherd,F,1809,1857
+69,Russell_AT,Arthur T. Russell,M,1806,1874
+156,White_BF,B. F. White,M,1800,1879
+20,Balfe_MW,Balfe,M,1808,1870
+142,Stow_B1,Baron Stow,M,1801,1869
+99,Kennedy_BH,Benjamin H. Kennedy,M,1804,1889
+22,Puchta_CRH1,Christian Rudolph Heinrich Puchta,M,1808,1858
+70,Balle_CCN,C. C. N. Balle,M,1806,1855
+157,Thomas_CH1,C. H. Thomas,F,1800,1900
+100,Herlossohn_Carl,C. Herlossohn,M,1804,1849
+143,Hagenbach_CR2,Carl Rudolph Hagenbach,M,1801,1874
+122,Cleveland_CD3,Charles Dexter Cleveland,M,1802,1869
+158,Butler_CJ1,Charles J. Butler,M,1800,1900
+144,Swain_C1,Charles Swain,M,1801,1874
+46,Wordsworth_C,Christopher Wordsworth,M,1807,1855
+145,Concone_Giuseppe,Concone,M,1801,1861
+23,Costa_M,Costa,M,1808,1884
+24,Dutton_D5,Deodotus Dutton,M,1808,1832
+84,Drummond_DTK1,David T. K. Drummond,M,1805,1877
+64,Hatfield_EFEF,Edwin F. Hatfield,M,1807,1883
+47,Barrows_ElijahP,E. P. Barrows,M,1807,1888
+48,Dayman_EA,Edward Arthur Dayman,M,1807,1890
+159,Churton_E1,Edward Churton,M,1800,1874
+71,Dearle_E,Edward Dearle,M,1806,1891
+5,White_EL3,Edward L. White,M,1809,1851
+123,Ives_E,Elam Ives,,1802,1864
+101,Snow_ER,Eliza R. Snow,F,1804,1887
+6,Browning_EB1,Elizabeth Barrett Browning,F,1809,1861
+85,Mills_E,Elizabeth Mills,F,1805,1829
+160,Benedict_EC1,Erastus C. Benedict,M,1800,1880
+136,Hawkins_E,Ernest Hawkins,M,1802,1868
+86,Hodge_F,F. H. Hodge,M,1805,1890
+7,Mendelssohn_F,Felix Mendelssohn,M,1809,1847
+8,Colquhoun_FS,Frances S. Colquhoun,F,1809,1877
+87,Hedge_FH,Frederick Henry Hedge,M,1805,1890
+124,Oakeley_F,Frederick Oakeley,M,1802,1880
+49,Tennyson_F1,Frederick Tennyson,M,1807,1898
+102,Filitz_F,Friedrich Filitz,M,1804,1876
+9,Burgess_G1,George Burgess,M,1809,1866
+161,Atkins_G,George Atkins,M,1800,1899
+50,Cheever_GB3,George Barrell Cheever,M,1807,1890
+162,Moore_GD,George D. Moore,M,1800,1900
+72,Hews_G,George Hews,M,1806,1873
+113,Webb_GJ,George James Webb,M,1803,1887
+125,Morris_GP,George P. Morris,M,1802,1864
+51,Rawson_G,George Rawson,M,1807,1889
+103,Tuttle_G,George Tuttle,M,1804,1872
+88,Bethune_GW,George W. Bethune,M,1805,1862
+10,Step_G1,Gerhard Step,M,1809,1882
+11,Giusti_G,Giuseppe Giusti,M,1809,1850
+163,Timm_HA,H. A. Timm,M,1800,1866
+126,Bateman_H1,H. Bateman,M,1802,1872
+127,Martineau_H1,Harriet Martineau,F,1802,1876
+52,Rung_H,H. Rung,M,1807,1871
+53,MacKeever_HB,Harriet Burn MacKeever,U,1807,1887
+21,Boardman_HAHA,Henry Augustus Boardman,M,1808,1880
+27,Chorley_HF,Henry F. Chorley,M,1808,1872
+89,Gauntlett_HJ,Henry J. Gauntlett,M,1805,1876
+164,Oliver_HK,Henry K. Oliver,M,1800,1885
+54,Longfellow_HW,Henry W. Longfellow,M,1807,1882
+28,Bonar_H,Horatius Bonar,M,1808,1889
+128,Williams_Isaac,Isaac Williams,M,1802,1865
+12,Elliott_JA,J. A. Elliot,F,1809,1841
+29,Gebauer_JC,J. C. Gebauer,M,1808,1884
+90,Chambers_J,J. D. Chambers,M,1805,1893
+165,Goss_J,John A. Goss,M,1800,1880
+25,Wichern_JH,J. H. Wichern,M,1808,1881
+30,Harrison_J,James F. Harrison,U,1808,1871
+166,Darby_JN1,John Nelson Darby,M,1800,1882
+119,Brown_JN1,J. Newton Brown,M,1803,1868
+91,Hartmann_JPE,J. P. E. Hartmann,M,1805,1900
+55,Welhaven_JSC1,Johan Sebastian Welhaven,M,1807,1873
+129,Whittemore_J,J. Whittemore,M,1802,1860
+130,Deck_JG,James G. Deck,M,1802,1884
+167,Burke_JH,James H. Burke,M,1800,1900
+92,Martineau_J1,James Martineau,M,1805,1900
+131,Turle_J,James Turle,M,1802,1882
+104,Alexander_JW,James W. Alexander ,M,1804,1859
+31,Crewdson_J,Jane Crewdson,F,1808,1863
+56,Leeson_JE,Jane Elizabeth Leeson,F,1807,1882
+57,Hascall_J,Jefferson Hascall,M,1807,1887
+114,Burton_JJ1,John Burton,M,1803,1877
+58,Campbell_J,John Campbell,M,1807,1860
+73,Chandler_J,John Chandler,M,1806,1876
+74,Edwards_JD,John D. Edwards,M,1806,1885
+59,Whittier_JG,John Greenleaf Whittier,M,1807,1892
+132,Gurney_JH,John H. Gurney,M,1802,1862
+146,Newman_JH,John Henry Newman,M,1801,1890
+169,Henley_J2,John Henley,M,1800,1900
+147,Clapham_JP1,John P. Clapham,M,1801,1875
+170,Wreford_JR,John Reynell Wreford,M,1800,1891
+75,Sterling_J2,John Sterling,M,1806,1844
+13,Blackie_J,John Stuart Blackie,M,1809,1895
+32,Taylor_J3,John Taylor,M,1808,1887
+33,Anstice_J1,Joseph Anstice,M,1808,1836
+148,Mainzer_J,Joseph Mainzer,M,1801,1851
+171,Smith_J1,Joseph Smith,M,1800,1873
+X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!
+149,Stammers_J,Joseph Stammers,M,1801,1885
+93,Himes_JV,Joshua V. Himes,M,1805,1895
+76,Schubring_J,Julius Schubring,U,1806,
+172,century_LWt,L. W.,U,1800,1900
+60,Lyons_Lorenzo,Laiana,M,1807,1886
+34,Layritz_F,Layritz,M,1808,1859
+133,Bacon_L,Leonard Bacon,M,1802,1881
+14,Baxter_L,Lydia Baxter,F,1809,1874
+134,Landstad_MB,Magnus Brostrup Landstad,M,1802,1880
+35,Campbell_MCM1,Margaret C. M. Campbell,F,1808,1841
+135,Mackay_M,Margaret Mackay,F,1802,1887
+77,Peters_MB1,Mary Peters,F,1806,1856
+173,Bridges_M,Matthew Bridges,M,1800,1894
+105,Glinka_MI,Mikhail I. Glinka,M,1804,1857
+150,Bremer_F1,Frederica Bremer,F,1801,1865
+61,Palmer_PW,Phoebe Palmer,F,1807,1874
+62,Willis_NP1,N. P. Willis,M,1807,1867
+78,Adams_N1,Nehemiah Adams,M,1806,1878
+174,Scott_O,O. Scott,M,1800,1847
+15,Holmes_OW,Oliver Wendell Holmes,M,1809,1894
+151,Whittlesey_O,Orramel Whittlesey,M,1801,1876
+175,Wieselgren_P1,P. Wieselgren,M,1800,1877
+115,Maurice_P,Peter Maurice,M,1803,1878
+116,Parson_P,Petro Parson,M,1803,1878
+36,Cappeau_P,Placide Cappeau,M,1808,1877
+117,Chapman_RC1,R. Chapman,M,1803,1902
+63,Park_R1,R. Park,M,1807,1869
+118,Emerson_RW1,Ralph Waldo Emerson,M,1803,1882
+37,Palmer_R,Ray Palmer,M,1808,1887
+176,Massie_R,Richard Massie,M,1800,1887
+38,West_R,Robert A. West,M,1808,1865
+65,Trench_RC,Richard Chenevix Trench,M,1807,1886
+79,Richardson_R,Robert Richardson,M,1806,1876
+16,Turnbull_R1,Robert Turnbull,M,1809,1877
+177,Elliott_R,Ruth Elliott,F,1800,1900
+106,Sulzer_S,S. Sulzer,M,1804,1890
+39,Smith_SF,Samuel Francis Smith,M,1808,1895
+107,Smith_S,Samuel Smith,M,1804,1873
+66,Miles_SE1,Sarah Elizabeth Miles,F,1807,
+94,Adams_SF,Sarah F. Adams,F,1805,1848
+108,Brewer_SS,Sidney S. Brewer,M,1804,1889
+152,Spitta_KJP,Karl Johann Philipp Spitta,M,1801,1859
+95,Elvey_S,Stephen Elvey,M,1805,1860
+4,Bulfinch_SG1,Stephen Greenleaf Bulfinch,M,1809,1870
+80,Ashworth_TA1,T. A. Ashworth,M,1806,1884
+178,Whittemore_T,T. Whittemore,M,1800,1861
+109,Davis_T3,Thomas Davis,M,1804,
+40,Stockton_TH1,Thomas H. Stockton,M,1808,1868
+67,Taylor_TR,Thos. R. Taylor,M,1807,1835
+153,Mason_TB,Timothy Battle Mason,M,1801,1861
+138,Hugo_Victor,Victor Hugo,M,1802,1885
+17,Strauss_V,Viktor Strauss,M,1809,1899
+154,Cutter_W1,William Cutter,M,1801,1867
+110,Copeland_WJ,William J. Copeland,M,1804,1885
+96,Bunting_WM1,William Maclardie Bunting,M,1805,1866
+81,Wackernagel_W1,Wackernagel,M,1806,1869
+41,Loehe_W,Wilhelm Loehe,M,1808,1872
+155,Ball_W1,William Ball,M,1801,1878
+111,Croswell_W1,William Croswell,M,1804,1851
+97,Gaskell_W,William Gaskell,M,1805,1884
+68,Callcott_WH,William H. Callcott,M,1807,1882
+137,Furness_WH1,William Henry Furness,M,1802,1896
+42,Blew_WJ1,William John Blew,M,1808,1894
+43,Alexander_WL1,William Lindsay Alexander,M,1808,1884
+179,Moore_W,William Moore,M,1800,1900
+98,Whittingham_WR,William R. Whittingham,M,1805,1879
+18,Walker_W,William Walker,M,1809,1875
+120,Zuccamaglio_AWFv,Zuccalmaglio,U,1803,1869
