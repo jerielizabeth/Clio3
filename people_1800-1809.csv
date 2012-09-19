@@ -1,4 +1,4 @@
-PK_People,personID,personName 1,gender,personYear,deathYear
+pk_person,personID,personName,gender,birthYear,deathYear
 82,Bennett_A,A. Bennett,M,1805,1830
 83,Burckhardt_A,Abel Burckhardt,M,1805,1882
 44,Thomas_AC1,A. C. Thomas,M,1807,1880
@@ -106,7 +106,6 @@ PK_People,personID,personName 1,gender,personYear,deathYear
 33,Anstice_J1,Joseph Anstice,M,1808,1836
 148,Mainzer_J,Joseph Mainzer,M,1801,1851
 171,Smith_J1,Joseph Smith,M,1800,1873
-X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!,X Tabula tor  is  unre gi stered!
 149,Stammers_J,Joseph Stammers,M,1801,1885
 93,Himes_JV,Joshua V. Himes,M,1805,1895
 76,Schubring_J,Julius Schubring,U,1806,
