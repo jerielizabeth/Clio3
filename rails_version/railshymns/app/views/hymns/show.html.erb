@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personname:</b>
+  <%= @hymn.personName %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @hymn.gender %>
+</p>
+
+<p>
+  <b>Birthyear:</b>
+  <%= @hymn.birthYear %>
+</p>
+
+<p>
+  <b>Deathyear:</b>
+  <%= @hymn.deathYear %>
+</p>
+
+
+<%= link_to 'Edit', edit_hymn_path(@hymn) %> |
+<%= link_to 'Back', hymns_path %>

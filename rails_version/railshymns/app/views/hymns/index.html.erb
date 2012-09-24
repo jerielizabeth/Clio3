@@ -1,0 +1,29 @@
+<h1>Listing Hymn Authors</h1>
+
+<table>
+  <tr>
+    <th>Full Name</th>
+    <th>Gender</th>
+    <th>Birth Year</th>
+    <th>Death Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hymns.each do |hymn| %>
+  <tr>
+    <td><%= hymn.personName %></td>
+    <td><%= hymn.gender %></td>
+    <td><%= hymn.birthYear %></td>
+    <td><%= hymn.deathYear %></td>
+    <td><%= link_to 'Show', hymn %></td>
+    <td><%= link_to 'Edit', edit_hymn_path(hymn) %></td>
+    <td><%= link_to 'Destroy', hymn, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hymn', new_hymn_path %>
