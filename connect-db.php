@@ -6,5 +6,5 @@ if (mysqli_connect_error()) {
             . mysqli_connect_error());
 }
 
-echo 'Success... ' . $mysqli->host_info . "\n";
+//echo 'Success... ' . $mysqli->host_info . "\n";
 ?>

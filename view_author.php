@@ -16,7 +16,7 @@
                                         $per_page = 15;
                                         
                                         // figure out the total pages in the database
-                                        if ($result = $mysqli->query("SELECT pk_text, firstLine, textTitle, refrainFirstLine FROM text ORDER BY pk_text desc"))
+                                        if ($result = $mysqli->query("SELECT pk_person, personName, gender, birthYear, deathYear FROM person ORDER BY personName asc"))
                                         {
                                                 if ($result->num_rows != 0)
                                                 {
@@ -66,7 +66,7 @@
                                                         
                                                         // display data in table
                                                         echo "<table border='1' cellpadding='10'>";
-                                                        echo "<tr> <th>ID</th><th>First Line</th> <th>Title</th><th>Refrain</th> <th></th> <th></th></tr>";
+                                                        echo "<tr> <th>ID</th><th>Author Name</th> <th>Gender</th><th>Birth Year</th> <th>Year Died</th><th></th> <th></th></tr>";
                                                 
                                                         // loop through results of database query, displaying them in the table 
                                                         for ($i = $start; $i < $end; $i++)
@@ -84,6 +84,7 @@
                                                         echo '<td>' . $row[1] . '</td>';
                                                         echo '<td>' . $row[2] . '</td>';
                                                         echo '<td>' . $row[3] . '</td>';
+                                                        echo '<td>' . $row[4] . '</td>';
                                                         echo '<td><a href="show.php?id=' . $row[0] . '">Show</a></td>';
                                                         echo '<td><a href="delete-text.php?id=' . $row[0] . '">Delete</a></td>';
                                                         echo "</tr>";
@@ -107,7 +108,7 @@
                         $mysqli->close();
                 
                 ?>
-                <p><a href="view_author.php">View Authors</a></p>
+                <p><a href="view.php">View Texts</a></p>
                 <p><a href="form.html">Add New Hymn</a></p>
         </body>
 </html>
