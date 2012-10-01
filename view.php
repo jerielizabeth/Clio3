@@ -85,6 +85,7 @@
                                                         echo '<td>' . $row[2] . '</td>';
                                                         echo '<td>' . $row[3] . '</td>';
                                                         echo '<td><a href="show.php?id=' . $row[0] . '">Show</a></td>';
+                                                        //echo '<td><a href="records.php?id=' . $row[0] . '">Edit</a></td>';
                                                         echo '<td><a href="delete-text.php?id=' . $row[0] . '">Delete</a></td>';
                                                         echo "</tr>";
                                                         }
@@ -107,8 +108,9 @@
                         $mysqli->close();
                 
                 ?>
-                <p><a href="view_author.php">View Authors</a></p>
-                <p><a href="form.html">Add New Hymn</a></p>
+
+                <p><a href="records.php">Add New Hymn</a></p>
+                <p><a href="search.php">Search Database</a></p>
         </body>
 </html>
 </html>

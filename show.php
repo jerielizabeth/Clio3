@@ -4,7 +4,7 @@
     <title>Show Page</title>
 </head>
 <body>
-
+<h2>Item Details Page</h2>
 <?php
 
 //include('connect-db.php');
@@ -24,11 +24,11 @@ $row = mysql_fetch_array($text_result);
      
     // display records if there are records to display
             // display records in a table
-            echo "<h2>Hymn: " . $row['firstLine'] . "</h2>";
+            echo "<h3>Hymn: " . $row['firstLine'] . "</h3>";
             echo "<table border='1' cellpadding='10'>";
             
             // set table headers
-            echo "<tr><th>ID</th><th>First Line</th><th>Title</th><th>Refrain</th></tr>";
+            echo "<tr><th>ID</th><th>First Line</th><th>Title</th><th>Refrain</th><th></th></tr>";
             
             
                     // set up a row for each record
@@ -37,6 +37,7 @@ $row = mysql_fetch_array($text_result);
                     echo "<td>" . $row['firstLine'] . "</td>";
                     echo "<td>" . $row['textTitle']. "</td>";
                     echo "<td>" . $row['refrainFirstLine']. "</td>";  
+                    echo '<td><a href="records.php?id=' . $row[0] . '">Edit</a></td>';
                     echo "</tr>";
             
             
@@ -44,7 +45,7 @@ $row = mysql_fetch_array($text_result);
 
             echo "<br />";
     
-            echo "<h3>Author Information</h3>";
+            echo "<h4>Author Information</h4>";
 
     $author = "SELECT person.pk_person, person.personName, person.gender, person.birthYear, person.deathYear, author_join.fk_person, author_join.fk_text "
     ."FROM person, author_join "
@@ -52,15 +53,16 @@ $row = mysql_fetch_array($text_result);
     ." HAVING author_join.fk_person = person.pk_person";
 
             if ( $author_result = mysql_query($author)) {
-                
-                while ($row = mysql_fetch_array($author_result)) {
-                //display results in a table
 
                 echo "<table border='1' cellpadding='10'>";
             
                 // set table headers
-                echo "<tr><th>ID</th><th>Name</th><th>Gender</th><th>Birth Year</th><th>Death Year</th></tr>";
-            
+                echo "<tr><th>ID</th><th>Name</th><th>Gender</th><th>Birth Year</th><th>Death Year</th><th></th></tr>";
+                
+                while ($row = mysql_fetch_array($author_result)) {
+                //display results in a table
+
+                 
             
                     // set up a row for each record
                     echo "<tr>";
@@ -69,6 +71,7 @@ $row = mysql_fetch_array($text_result);
                     echo "<td>" . $row['gender']. "</td>";
                     echo "<td>" . $row['birthYear']. "</td>";
                     echo "<td>" . $row['deathYear']. "</td>";
+                    echo '<td><a href="records_author.php?id=' . $row[0] . '">Edit</a></td>';
                     echo "</tr>";
             
             
@@ -78,8 +81,12 @@ $row = mysql_fetch_array($text_result);
                 }// closes while loop
             
             }// closes if loop
+
+            //echo "<a href="records.php">Edit this Record</a>"
             ?>
-        
+        <p><a href="records_author.php">Add Author</a></p>
+        <p><a href="view.php">Return to All Records</a></p>
+
 
 <?php
 /*

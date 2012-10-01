@@ -1,18 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-	<title>Update Database</title>
-</head>
-<body>
-
-<h1>Update the Hymn Database</h1>
-<br>
-<form action="update_hymn.php" method="post">
-*Hymn Title (required): <input type="text" name="title" /></br>
-*First Line (required): <input type="text" name="fline" /></br>
-Refrain, First Line: <input type="text" name="refrain" /></br>
-Language: <input type="text" name="language" /></br>
-<input type="submit" name="add" id="add" value="Submit" />
-</form>
-
-</body>
-</html>
+            <head>  
+                <title>
+                        <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
+                </title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        </head>
+        <body>
+                <h1><?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?></h1>
+                <?php if ($error != '') {
+                        echo "<div style='padding:4px; border:1px solid red; color:red'>" . $error
+                                . "</div>";
+                } ?>
+                
+                <form action="" method="post">
+                
+                    <?php if ($id != '') { ?>
+                    <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                    <p>ID: <?php echo $id; ?></p>
+                    <?php } ?>
+                    
+                    <strong>Hymn Title: *</strong> <input type="text" name="textTitle"
+                            value="<?php echo $title; ?>"/><br/>
+                    <strong>First Line: *</strong> <input type="text" name="firstLine"
+                            value="<?php echo $fline; ?>"/><br />
+                        <br/>
+                    <strong>Author: *</strong> <input type="text" name="personName"
+                            value="<?php echo $name; ?>"/><br />
+                    <p>* required</p>
+                    <input type="submit" name="submit" value="Submit" />
+                
+                </form>
+            </body>
+        </html>
