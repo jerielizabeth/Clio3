@@ -82,7 +82,7 @@
                                 else
                                 {
                                         // if everything is fine, update the record in the database
-                                        if ($stmt = $mysqli->prepare("UPDATE text SET firstLine = ?, textTitle = ?, refrainFirstLine = ? WHERE pk_text = " ."'" .$id ."'"))
+                                        if ($stmt = $mysqli->prepare("UPDATE text SET firstLine = ?, textTitle = ?, refrainFirstLine = ? WHERE pk_text = ?"))
                                         {
                                                 $stmt->bind_param("sssi", $fline, $title, $refrain, $id);
                                                 $stmt->execute();
@@ -114,7 +114,7 @@
                                 $id = $_GET['id'];
                                 
                                 // get the recod from the database
-                                if($stmt = $mysqli->prepare("SELECT textTitle, firstLine, refrainFirstLine FROM text WHERE pk_text=".$id))
+                                if($stmt = $mysqli->prepare("SELECT textTitle, firstLine, refrainFirstLine FROM text WHERE pk_text = ?"))
                                 {
                                         $stmt->bind_param("i", $id);
                                         $stmt->execute();

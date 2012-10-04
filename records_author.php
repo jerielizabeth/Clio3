@@ -14,12 +14,12 @@
         <html>
             <head>  
                 <title>
-                        <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
+                        <?php if ($id != '') { echo "Edit Author Information"; } else { echo "New Author"; } ?>
                 </title>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         </head>
         <body>
-                <h1><?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?></h1>
+                <h2><?php if ($id != '') { echo "Edit Author Information: " .$name; } else { echo "New Record"; } ?></h2>
                 <?php if ($error != '') {
                         echo "<div style='padding:4px; border:1px solid red; color:red'>" . $error
                                 . "</div>";
@@ -63,24 +63,30 @@
                         {
                                 // get variables from the URL/form
                                 $id = $_POST['id'];
-                                $title = htmlentities($_POST['textTitle'], ENT_QUOTES);
-                                $fline = htmlentities($_POST['firstLine'], ENT_QUOTES);
-                                //$name = htmlentities($_POST['personName'], ENT_QUOTES);
+                                $text = $_POST['text'];
+                                $name = htmlentities($_POST['name'], ENT_QUOTES);
+                                $gender = htmlentities($_POST['gender'], ENT_QUOTES);
+                                $byear = htmlentities($_POST['byear']);
+                                $dyear = htmlentities($_POST['dyear']);
                                 
                                 // check that firstname and lastname are both not empty
-                                if ($title == '' || $fline == '')
+                                if ($name == '')
                                 {
                                         // if they are empty, show an error message and display the form
                                         $error = 'ERROR: Please fill in all required fields!';
-                                        renderForm($title, $fline, $error, $id);
+                                        renderForm($name, $gender, $byear, $dyear, $error, $id, $text);
                                 }
                                 else
                                 {
                                         // if everything is fine, update the record in the database
-                                        if ($stmt = $mysqli->prepare("UPDATE text SET textTitle = ?, firstLine = ?
-                                                WHERE id=?"))
+                                        if ($stmt = $mysqli->prepare("UPDATE person SET personName = ?, gender = ?, birthYear = ?, deathYear = ? WHERE id = ?"))
                                         {
-                                                $stmt->bind_param("ssi", $title, $fline, $id);
+                                                $stmt->bind_param("ssiii", $name, $gender, $byear, $dyear, $id);
+                                                $stmt->execute();
+                                                $stmt->close();
+
+                                          $stmt = $mysqli->prepare ("INSERT INTO author_join SET fk_person = ?, fk_text = ?");
+                                                $stmt->bind_param("ii", $id, $text);
                                                 $stmt->execute();
                                                 $stmt->close();
                                         }
@@ -88,6 +94,7 @@
                                         else
                                         {
                                                 echo "ERROR: could not prepare SQL statement.";
+
                                         }
                                         
                                         // redirect the user once the form is updated
@@ -108,24 +115,26 @@
                         {
                                 // get 'id' from URL
                                 $id = $_GET['id'];
+                                $text = $_GET['text'];
                                 
                                 // get the recod from the database
-                                if($stmt = $mysqli->prepare("SELECT textTitle, firstLine FROM text WHERE pk_text=".$id))
+                                if($stmt = $mysqli->prepare("SELECT personName, gender, birthYear, deathYear FROM person WHERE pk_person = ?"))
                                 {
                                         $stmt->bind_param("i", $id);
                                         $stmt->execute();
                                         
-                                        $stmt->bind_result($title, $fline);
+                                        $stmt->bind_result($name, $gender, $byear, $dyear);
                                         $stmt->fetch();
                                         
                                         // show the form
-                                        renderForm($title, $fline, NULL, $id);
+                                        renderForm($name, $gender, $byear, $dyear, NULL, $id, $text);
                                         
                                         $stmt->close();
                                 }
                                 // show an error if the query has an error
                                 else
                                 {
+                                        //echo $stmt;
                                         echo "Error: could not prepare SQL statement";
                                 }
                         }
@@ -151,33 +160,48 @@
                 if (isset($_POST['submit']))
                 {
                         // get the form data
-                        $title = htmlentities($_POST['textTitle'], ENT_QUOTES);
-                        $fline = htmlentities($_POST['firstLine'], ENT_QUOTES);
+                        $text = $_GET['text'];
+                        $name = htmlentities($_POST['name'], ENT_QUOTES);
+                        $gender = htmlentities($_POST['gender'], ENT_QUOTES);
+                        $byear = htmlentities($_POST['byear']);
+                        $dyear = htmlentities($_POST['dyear']);
                         
                         // check that firstname and lastname are both not empty
-                        if ($title == '' || $fline == '')
+                        if ($name == '')
                         {
                                 // if they are empty, show an error message and display the form
                                 $error = 'ERROR: Please fill in all required fields!';
-                                renderForm($title, $fline, $error);
+                                renderForm($name, $gender, $byear, $dyear, $error);
                         }
                         else
                         {
                                 // insert the new record into the database
-                                if ($stmt = $mysqli->prepare("INSERT text (textTitle, firstLine) VALUES (?, ?)"))
+                                if ($stmt = $mysqli->prepare("INSERT INTO person (personName, gender, birthYear, deathYear) VALUES (?, ?, ?, ?)"))
                                 {
-                                        $stmt->bind_param("ss", $title, $fline);
+                                        $stmt->bind_param("ssii", $name, $gender, $byear, $dyear);
                                         $stmt->execute();
                                         $stmt->close();
+
+                                    $id = $mysqli->insert_id;    
+
+                                    $stmt = $mysqli->prepare ("INSERT INTO author_join SET fk_person = ?, fk_text = ?");
+                                                $stmt->bind_param("ii", $id, $text);
+                                                $stmt->execute();
+                                                $stmt->close();
+    
                                 }
+                                
                                 // show an error if the query has an error
                                 else
                                 {
+                                        //echo $stmt;
                                         echo "ERROR: Could not prepare SQL statement.";
                                 }
+
                                 
+
                                 // redirec the user
-                                header("Location: view.php");
+                                header("Location: show.php?id=" .$text);
                         }
                         
                 }

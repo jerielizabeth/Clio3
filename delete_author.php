@@ -8,15 +8,16 @@
         {
                 // get the 'id' variable from the URL
                 $id = $_GET['id'];
+                $text = $_GET['text'];
                 
                 // delete record from database
-                if ($stmt = $mysqli->prepare("DELETE FROM text WHERE pk_text = ? LIMIT 1"))
+                if ($stmt = $mysqli->prepare("DELETE FROM person WHERE pk_person = ? LIMIT 1"))
                 {
                         $stmt->bind_param("i",$id);     
                         $stmt->execute();
                         $stmt->close();
 
-                        $stmt = $mysqli->prepare ("DELETE FROM author_join WHERE fk_text = ?");
+                        $stmt = $mysqli->prepare ("DELETE FROM author_join WHERE fk_person = ?");
                                 $stmt->bind_param("i", $id);
                                 $stmt->execute();
                                 $stmt->close();

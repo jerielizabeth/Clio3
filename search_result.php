@@ -11,27 +11,35 @@
 
     // get search variable
 
-    //$name = htmlentities($_POST['name'], ENT_QUOTES);
+    $name = htmlentities($_POST['name'], ENT_QUOTES);
 	$gender = $_POST['gender'];
 	//$word = htmlentities($_POST['word'], ENT_QUOTES);
-    echo "<p>Search Results for Gender = $gender</p>";
+  
     
 	//search by name variable
     $query = "SELECT pk_person, personName, birthYear, deathYear FROM person WHERE gender = " ."'" .$gender ."'" ."ORDER BY personName asc";
-    //echo "<p>$query</p>";
+    //$query_text = "SELECT fk_text FROM author_join WHERE fk_person =";
+    /*$name_query = "SELECT pk_person, personName "
+    ."FROM person "
+    ."WHERE person.personName LIKE " ."'" .% .$name .% ."'";*/
+    
+    //echo "<p>$name_query</p>";
 
 
     if ($gender !=""){
 	   if($result = $mysqli->query($query))
+        
+        echo "<p>Search Results for Gender = $gender</p>";
         {
             if ($result->num_rows > 0){
 
                 echo "<table border='1' cellpadding='10'>";
             
                 // set table headers
-                echo "<tr><th>ID</th><th>Name</th><th>Birth Year</th><th>Death Year</th></tr>";
+                echo "<tr><th>ID</th><th>Name</th><th>Birth Year</th><th>Death Year</th><th></th><th></th></tr>";
                 while ($row = $result->fetch_array())
                 {
+                
                     // display records in a table
                     
                     //echo "help";
@@ -41,6 +49,8 @@
                     echo "<td>" . $row['personName'] . "</td>";
                     echo "<td>" . $row['birthYear'] . "</td>";
                     echo "<td>" . $row['deathYear'] . "</td>";
+                    echo '<td><a href="show_author.php?id=' . $row[0] . '">Show</a></td>';
+                    echo '<td><a href="delete_author.php?id=' . $row[0] . '&text=' .$row[6] .' ">Delete</a></td>';
                     echo "</tr>";
                 }
             
