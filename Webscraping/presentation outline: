@@ -1,0 +1,45 @@
+presentation outline:
+
+Using Wget
+	1. When to use
+		a. When you want to copy (mirror) a website or you want to pull down all the contents of a particular folder.
+		b. Good when the data on the web is well organized.
+	2. How it works:
+		a. Goes through and follows the links, sending back a copy of what it found along the way.
+	3. Benefits:
+		a. Get a mirror of the files on the site without ftp access. Saves you from downloading each page manually.
+	4. Risks:
+		a. Can "download the whole internet" if not careful. (not really. but kinda)
+		b. Can put a large strain on the server if you're not careful.
+
+Using Python
+	1. When to use
+		a. When you want to be more particular
+	2. How it works:
+		a. Writing script to go to particular URL and collect the data that is there
+	3. Benefits:
+		a. As part of the script, you can select particular pieces of data that you want to extract - this way you get only what you want, not the whole page in all its messiness.
+		b. Able to designate particular files rather than the whole website.
+	4. Risks:
+		a. Death by frustraton
+
+
+
+Practice - Wget
+	1. Wget - installed and ready.
+	2. Find website
+		a. example: anglicanhistory.org (but please don't everybody hit it)
+		b. identify content you are interested in. Watch URLs to see if they are well formed. If things appear to be contained and you want all of them, here's what to do
+	3. Use step from Programming Historian tutorial
+		a. walk through the parts: wget [options] [url]
+		b. -r, --no-parent, -l, -w 10, --limit-rate=20k, -m
+
+Practice: Python
+	1. check that you have python installed.
+		a. which python
+	2. identify what you want to grab
+	3. create script file
+		a. single to show how it works
+		b. multiple if I can crack that nut
+	4. run in command line
+
