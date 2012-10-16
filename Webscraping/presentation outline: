@@ -18,7 +18,7 @@ Using Python
 	2. How it works:
 		a. Writing script to go to particular URL and collect the data that is there
 	3. Benefits:
-		a. As part of the script, you can select particular pieces of data that you want to extract - this way you get only what you want, not the whole page in all its messiness.
+		a. 	
 		b. Able to designate particular files rather than the whole website.
 	4. Risks:
 		a. Death by frustraton

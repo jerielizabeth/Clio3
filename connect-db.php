@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', 'root', 'hymn_text');
+$mysqli = new mysqli('localhost', 'root', 'root', 'hymns');
 
 if (mysqli_connect_error()) {
     die('Connect Error (' . mysqli_connect_errno() . ') '

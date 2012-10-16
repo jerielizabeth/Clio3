@@ -2,22 +2,25 @@
 <html>
 <head>
     <title>Show Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 </head>
 <body>
+
+<div class="span12">
 <h2>Item Details Page</h2>
 <?php
 
 //include('connect-db.php');
 
 mysql_connect ("localhost", "root", "root") or die ('Error: . . .');
-mysql_select_db("hymn_text");
+mysql_select_db("hymns");
 
 // confirm that the 'id' variable has been set
         //if (isset($_GET['id']) && is_numeric($_GET['id']))
 // get the 'id' variable from the URL
 $id = $_GET['id'];
 
-$text = "SELECT pk_text, firstLine, textTitle, refrainFirstLine FROM text WHERE pk_text = " .$id;
+$text = "SELECT text.pk_text, text.firstLine, text.textTitle, text.refrainFirstLine, person.personName, person.gender, person.birthYear, person.deathYear FROM text, person, author_join WHERE text.pk_text = author_join.fk_text AND person.pk_person = author_join.fk_person AND pk_text = " .$id;
 $text_result = mysql_query($text);
 $row = mysql_fetch_array($text_result);
 
@@ -28,77 +31,42 @@ $row = mysql_fetch_array($text_result);
             echo "<table border='1' cellpadding='10'>";
             
             // set table headers
-            echo "<tr><th>Text ID</th><th>First Line</th><th>Title</th><th>Refrain</th><th></th><th></th></tr>";
+            echo "<tr><th>Text ID</th><th>First Line</th><th>Title</th><th>Refrain</th></tr>";
             
             
                     // set up a row for each record
                     echo "<tr>";
-                    echo "<td>" . $row['pk_text'] . "</td>";
-                    echo "<td>" . $row['firstLine'] . "</td>";
-                    echo "<td>" . $row['textTitle']. "</td>";
-                    echo "<td>" . $row['refrainFirstLine']. "</td>";  
-                    echo '<td><a href="records.php?id=' . $row[0] . '">Edit</a></td>';
-                    echo '<td><a href="delete_text.php?id=' . $row[0] . '">Delete</a></td>';
+                    echo "<td>" . $row[0] . "</td>";
+                    echo "<td>" . $row[1] . "</td>";
+                    echo "<td>" . $row[2]. "</td>";
+                    echo "<td>" . $row[3]. "</td>"; 
                     echo "</tr>";
             
             
             echo "</table>";
 
             echo "<br />";
-    
-            echo "<h4>Author Information</h4>";
 
-    $author = "SELECT person.pk_person, person.personName, person.gender, person.birthYear, person.deathYear, author_join.fk_person, author_join.fk_text "
-    ."FROM person, author_join "
-    ."WHERE author_join.fk_text = " .$id
-    ." HAVING author_join.fk_person = person.pk_person";
-
-            if ( $author_result = mysql_query($author)) {
-
-                                          
-                while ($row = mysql_fetch_array($author_result)) {
-                //display results in a table
-
-                    echo "<table border='1' cellpadding='10'>";
-            
-                    // set table headers
-                     echo "<tr><th>Text ID</th><th>Person ID</th><th>Name</th><th>Gender</th><th>Birth Year</th><th>Death Year</th><th></th><th></th></tr>";
-                     
-                    // set up a row for each record
+            echo "<table border='1' cellpadding='10'>";
+                echo "<tr><th>Author Name</th> <th>Gender</th><th>Born</th><th>Died</th></tr>";
                     echo "<tr>";
-                    echo "<td>" . $row[6] . "</td>";
-                    echo "<td>" . $row[0] . "</td>";
-                    echo "<td>" . $row[1] . "</td>";
-                    echo "<td>" . $row[2] . "</td>";
-                    echo "<td>" . $row[3] . "</td>";
-                    echo "<td>" . $row[4] . "</td>";
-                    echo '<td><a href="records_author.php?id=' . $row[0] . '&text=' .$id .'">Edit</a></td>';
-                    echo '<td><a href="delete_author.php?id=' . $row[0] . '&text=' .$row[6] .' ">Delete</a></td>';
+                    echo "<td>" . $row[4]. "</td>"; 
+                    echo "<td>" . $row[5]. "</td>"; 
+                    echo "<td>" . $row[6]. "</td>"; 
+                    echo "<td>" . $row[7]. "</td>";  
                     echo "</tr>";
-            
-            
-                
-                }// closes while loop
-                echo "</table>";
+            echo "</table>";
 
-                echo "<br />";
-            }// closes if loop
+            echo "<br />";
+            echo '<p><a href="records.php?id=' . $row[0] . '">Edit</a></p>';
+            echo '<p><a href="delete_text.php?id=' . $row[0] . '">Delete</a></p>';
 
-            else {
-                echo "Error showing author";
-            }
+            echo "<br />";
+    mysql_close($text_result);
 
-            //echo "<a href="records.php">Edit this Record</a>"
-            ?>
-        <p><?php echo '<a href="records_author.php?text=' . $id . '".php">Add Author</a>'; ?></p>
-        <p><a href="view.php">Return to All Records</a></p>
-
-
-<?php
-/*
-            $mysqli->close();
-            }*/
- ?> 
-
+        //echo "<a href="records.php">Edit this Record</a>"
+        ?>
+    <p><a href="view-all.php">Return to All Records</a></p>
+</div>
 </body>
 </html>
