@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>  
+<title>View Records</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<body>
+
+<h1>Hymn Database</h1>
+
+<form id="search_params" action ="?search_by" method = "post">
+        <input type="radio" id="personName" value="personName" name="radio" /><label for="personName">Sort by Author</label>
+        <input type="radio" id="firstLine" value="firstLine" name="radio" checked="checked" /><label for="textName">Sort by First Line</label>
+</form>
+
+</body>
+
+function search_by () {
+        $sort = $_POST['radio']
+
+}
