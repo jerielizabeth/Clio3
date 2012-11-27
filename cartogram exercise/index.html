@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Awesome, but colorless, Cartogram</title>
+    
+    <script src="http://d3js.org/d3.v2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/cartogram.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="styles/cartogram.css"/>
+
+  </head>
+  <body>
+
+    <div id="slider"></div>
+
+    <input type="checkbox" id="check"/><label for="check">Toggle</label>
+    
+    <div id="chart"></div>
+      
+      <script>
+      $(function() {
+        
+        // these dates should match the data you've scraped from bioguide
+        startYear=1887;
+        endYear=1895;
+
+        $( "#slider" ).slider({'min':startYear, 'max':endYear, 'value':startYear, 'step':2,
+          change: function(event, ui) { // define a function to run whenever the slide is changed
+            newYear = ui.value;
+            redraw(newYear);
+          }
+        });
+    
+        $("#check").change(function() {
+          animate($( "#slider" ).slider("value")); // call the animate function with the current value (=year) of the slider
+        });
+
+        begin(); // find this function in cartogram.js
+
+      });
+      </script>
+
+  </body>
+</html>

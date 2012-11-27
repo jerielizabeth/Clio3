@@ -1,0 +1,14 @@
+.black {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 3px;
+}
+
+.white {
+  fill: #fff;
+}
+
+.grey {
+  fill: #ccc;
+  stroke: #666;
+}
