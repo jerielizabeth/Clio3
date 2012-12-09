@@ -1,0 +1,368 @@
+/*** CSS File ***/
+
+/* Browser Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*** Font Information ***/
+/*** Universal ***/
+body{
+	font-family: Georgia, serif;
+	font-size:.9em;
+	text-align: left;
+	background-color: #FBF7E6;
+	color: #444;
+	width: 100%;
+	height: 100%;
+}
+#wrapper{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+/*** Header ***/
+
+#header h1{
+	width: 960px;
+	float:left;
+	padding:5px 25px 0 50px;
+	font-family: 'Tangerine', Helvetica, cursive, sans-serif;
+	text-align:left;
+	font-size:8em;
+	color:#264060;
+}
+#header h1 a{
+	color:#264060;
+	text-decoration: none;
+}
+#header h2{
+	width:920px;
+	float:left;
+	text-align:right;
+	font-size:1.5em;
+	margin-right:40px;
+	padding-bottom: 5px;
+	}
+
+/*** Content Wrapper ***/
+#contentWrapper{
+	width:960px;
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+	}
+/*** Nav ***/
+
+#nav ul{
+	width:960px;
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+	border-top-style:double;
+	border-top-width:thick;
+	border-bottom-style:solid;
+	border-bottom-width:thin;
+	}
+
+#nav ul li a {
+    width: 80px;
+	}
+
+#nav li:hover ul {
+    display: block;
+	}
+
+#nav li{
+	float:left;
+	margin-left:30px;
+	padding:5px 65px 5px 65px;
+	list-style-type:none;
+	text-align: center;
+	}	
+#nav a{
+	color:#666;
+	font-family: Georgia, serif;
+	font-size:1.4em;
+	text-decoration: none;
+	}
+	
+#nav a:hover{
+	color:#264060;}	
+/*** Content ***/
+#content{
+	width:960px;
+	float:left;
+	height:100%;
+	padding:10px 0 10px 0;
+	font-size: 1.1em;
+	}
+#content h2 {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 2.3em;
+	text-align: left;
+	padding-top:10px;
+}
+#content h3{
+	text-align:left;
+	font-size:1.75em;
+	padding-bottom: 10px;
+	padding-top:10px;
+	}
+#content h4{
+	font-size:1.4em;
+	font-style: italic;
+	padding: 10px 0 10px 0;
+	}
+#content h5 {
+	font-size: 1.2em;
+	font-variant: small-caps;
+	padding:10px 0 5px 0;
+}
+#content figure{
+	width:250px;
+	float:left;
+	margin:10px 25px 10px 25px;
+	padding-left:20px;
+	/*border-width:1px;
+	border-style:solid;*/
+	}
+#content figcaption{
+	text-align:center;
+	}
+#content p{
+	padding: 10px 0 5px 0;
+	font-family: 'Oxygen', Geneva, sans-serif;
+	font-size:1em;
+	line-height:1.5em;
+	}	
+#content a{
+	text-decoration:underline;
+	color:#264060;
+	}
+#content a:hover{
+	text-decoration:underline;
+	}
+#content a:active{
+	text-decoration:underline;
+	}
+#content ul{
+	margin-left:40px;
+	padding:10px 0 0 0;
+	font-size:1.05em;
+}
+#content li{
+	line-height:1.3em;
+	}
+/*** block ***/
+#content .block{
+	width:960px;
+	float:left;
+}
+/*** Table ***/
+
+#content #myTable.tablesorter {
+	width: 100%;
+ 	border: 1px solid #000;
+ 	border-collapse: collapse;
+}
+#content #myTable th{
+	font-size:1.3em;
+	padding:5px 0;
+}
+#content #myTable th, td{
+	text-align: left; 
+	vertical-align: top; 
+	border: 1px solid #000;
+	padding:5px;
+}
+#myTable th.headerSortUp { 
+    background-image: url(images/asc.gif); 
+    background-color: #264060;
+    color:#FBF7E6;
+} 
+#myTable th.headerSortDown { 
+    background-image: url(images/desc.gif); 
+    background-color: #264060;
+    color:#FBF7E6; 
+} 
+#content #myTable th.header { 
+    background-image: url(images/bg.gif);     
+    cursor: pointer; 
+    font-weight: bold; 
+    background-repeat: no-repeat; 
+    background-position: center left; 
+    padding-left: 20px; 
+    border-right: 1px solid #dad9c7; 
+    margin-left: -1px; 
+} 
+
+/**** Single ***/
+#single{
+	width:760px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+#single h2{
+	text-align:left;
+	font-size: 1.8em;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+#single h3{
+	text-align:left;
+	font-size:1.75em;
+	padding-bottom: 10px;
+	padding-top:10px;
+	}
+#single p{
+	padding: 10px 0 5px 0;
+
+}
+#single p.small{
+	font-size: .8em;
+	padding-top:2px;
+	padding-bottom:0;
+}
+#single ul{
+	margin-left:auto;
+	margin-right: auto;
+	list-style-type: none;
+}
+#single li{
+	margin-left:auto;
+	margin-right: auto;
+	line-height: 1.7em;
+
+}
+#single figure {
+	width: 260px;
+	float:left;
+	padding: 15px 25px 10px 25px;
+}
+/**Main **/
+#main{
+	width:635px;
+	float:left;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+
+/**Sidebar **/
+#sidebar {
+	width:280px;
+	float: left;
+	padding-left:30px;
+}
+#sidebar h4{
+	text-align: center;
+}
+#sidebar ul{
+	list-style-type: none;
+
+}
+/*** Viz ***/
+#visualization {
+	width:960px;
+	float:left;
+
+}
+#visualizationB{
+	width:960px;
+	float:left;
+}
+#visualizationC{
+	width:960px;
+	float:left;
+}
+
+/*** next ***/
+#next {
+	width:960px;
+	float: left;
+	text-align: right;
+}
+#next h4 {
+	font-size:1.3em;
+	color:#264060;
+}
+#next p{
+	width:960px;
+	text-align: right;
+	font-size: 1em;
+}
+/*** Footer ***/
+
+#footer {
+	margin-bottom: 50px;
+}
+
+#footer hr{
+	width: 960px;
+	float:left;
+	color:#653716;
+	text-align:right;
+	}
+#contact{
+	width:470px;
+	float:left;
+	padding: 0 5px 5px 5px;
+	text-align:left;
+	}
+#contact a{
+	text-decoration:none;
+	color:#264060;
+	padding:1px;
+	}
+#contact a:hover{
+	text-decoration:underline;
+	}
+#contact a:active{
+	text-decoration:underline;
+	}
+#contact ul{
+	list-style-type:none;
+	}
+#details {
+	width:470px;
+	float:left;
+	padding:0 5px 5px 5px;
+	text-align:right;
+	}
+#details a{
+	text-decoration:none;
+	color:#264060;
+	padding:1px;
+	}
+#details a:hover{
+	text-decoration:underline;
+	}
+#details a:active{
+	text-decoration:underline;
+	}

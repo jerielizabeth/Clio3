@@ -1,0 +1,4 @@
+[07-Dec-2012 16:01:43 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/academic/public_html/jeriwieringa.com/dev/view.php on line 41
+[07-Dec-2012 16:04:04 UTC] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/academic/public_html/jeriwieringa.com/dev/connect-db.php on line 2
+[07-Dec-2012 16:35:03 UTC] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/academic/public_html/jeriwieringa.com/dev/connect-db.php on line 2
+[09-Dec-2012 15:00:54 UTC] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/academic/public_html/jeriwieringa.com/dev/connect-db.php on line 2
