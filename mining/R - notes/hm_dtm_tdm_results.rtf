@@ -1,0 +1,276 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Transformations\
+\
+removePunctuation\
+removeNumbers\
+tolower\
+removeWhitespace\
+remove stopwords\
+\
+____\
+\
+hmdtm_rmsparse <- removeSparseTerms(hmdtm, .8) [created dendrogram]\
+\
+A document-term matrix (242 documents, 25 terms)\
+\
+Non-/sparse entries: 1741/4309\
+Sparsity           : 71%\
+Maximal term length: 6 \
+Weighting          : term frequency (tf)\
+\
+christ day death earth father glory god grace heart heaven holy jesus\
+king life light lord love night oer peace praise son soul spirit word\
+\
+_______\
+\
+hmtdm_rmsparse <- removeSparseTerms(hmtdm, .8) [created dendrogram]\
+\
+A term-document matrix (25 terms, 242 documents)\
+\
+Non-/sparse entries: 1741/4309\
+Sparsity           : 71%\
+Maximal term length: 6 \
+Weighting          : term frequency (tf)\
+_______\
+\
+findFreqTerms(hmdtm, 70, Inf)\
+ [1] "art"    "bright" "christ" "day"    "death"  "earth"  "father" "glory" \
+ [9] "god"    "grace"  "heart"  "heaven" "holy"   "jesus"  "king"   "life"  \
+[17] "light"  "lord"   "love"   "mind"   "peace"  "praise" "sing"   "son"   \
+[25] "soul"   "spirit" "word"   "world" \
+_______\
+\
+findAssocs(hmdtm, "art", .75)\
+          art        mental          mind          doth         world \
+         1.00          0.82          0.79          0.78          0.78 \
+        hymns      adjudged       adverse     adversity          aeon \
+         0.77          0.76          0.76          0.76          0.76 \
+    allsaving       allwise         aloft     ancestral       arehath \
+         0.76          0.76          0.76          0.76          0.76 \
+    attendant     attesting         badge       barrier         basis \
+         0.76          0.76          0.76          0.76          0.76 \
+       beacon       beacons          bead        begone       betides \
+         0.76          0.76          0.76          0.76          0.76 \
+      betwixt         binds     bleareyed        blithe     bloodless \
+         0.76          0.76          0.76          0.76          0.76 \
+        bloom         bodys         boons      bootless       bravery \
+         0.76          0.76          0.76          0.76          0.76 \
+      breadth       builtup    calamities  carthaginian    celebrated \
+         0.76          0.76          0.76          0.76          0.76 \
+      chained       chaplet        charge         check       chiefly \
+         0.76          0.76          0.76          0.76          0.76 \
+       choked      circling      cleanser        colour       contend \
+         0.76          0.76          0.76          0.76          0.76 \
+   continents      countrys      creeping          crop       crushed \
+         0.76          0.76          0.76          0.76          0.76 \
+    dangerous        daring     darkrayed     deceitful     deliverer \
+         0.76          0.76          0.76          0.76          0.76 \
+       demons   destructive     differing          dine     dishonour \
+         0.76          0.76          0.76          0.76          0.76 \
+         dogs       domains      downcast    downfallen        dragon \
+         0.76          0.76          0.76          0.76          0.76 \
+       dreams      drudgery        eddies       effects       efforts \
+         0.76          0.76          0.76          0.76          0.76 \
+       energy      enthrone         envys      escaping    excellence \
+         0.76          0.76          0.76          0.76          0.76 \
+     existing        exists      expanded      explores       exprest \
+         0.76          0.76          0.76          0.76          0.76 \
+ extinguished     extremest     faltering         famed   fascination \
+         0.76          0.76          0.76          0.76          0.76 \
+   fatherhood        feebly    fireproved         floor     forgetful \
+         0.76          0.76          0.76          0.76          0.76 \
+    forthwith      fortress      fortunes fountainheads      framedst \
+         0.76          0.76          0.76          0.76          0.76 \
+          fro        fruits          germ         glare       godless \
+         0.76          0.76          0.76          0.76          0.76 \
+        graze         gross        grovel         hadst        hailed \
+         0.76          0.76          0.76          0.76          0.76 \
+     handmaid       hapless         haply        harass       harmful \
+         0.76          0.76          0.76          0.76          0.76 \
+   harmonious     harmonize   hastbrought          haze  heartstrings \
+         0.76          0.76          0.76          0.76          0.76 \
+     helmsmen        helped        heroic        holily       hollows \
+         0.76          0.76          0.76          0.76          0.76 \
+        hoped       hopeful        hurled   idolworship      illspent \
+         0.76          0.76          0.76          0.76          0.76 \
+    immutable      impelled      imperial         inner        inrush \
+         0.76          0.76          0.76          0.76          0.76 \
+  inscrutable        intent    intoxicate        issued           jar \
+         0.76          0.76          0.76          0.76          0.76 \
+      journey          keys      labourer       lasting       learned \
+         0.76          0.76          0.76          0.76          0.76 \
+       learnt       leisure        libyan       libyans        libyas \
+         0.76          0.76          0.76          0.76          0.76 \
+     lifeless        limits          line          link         lists \
+         0.76          0.76          0.76          0.76          0.76 \
+          lit        livery         mazes     measuring          miss \
+         0.76          0.76          0.76          0.76          0.76 \
+     mouldeth        moulds        mouths         natal        nature \
+         0.76          0.76          0.76          0.76          0.76 \
+    necessity     neglected      northern      nurtured     nurturing \
+         0.76          0.76          0.76          0.76          0.76 \
+       object       obtains      outpours     outspread      passions \
+         0.76          0.76          0.76          0.76          0.76 \
+     pedestal     penalties     pervading        plains         pluck \
+         0.76          0.76          0.76          0.76          0.76 \
+        plumb          pool         posts     powerless   presumption \
+         0.76          0.76          0.76          0.76          0.76 \
+          pry         realm        record        reeled   refreshment \
+         0.76          0.76          0.76          0.76          0.76 \
+       region        remain         repay     reverence      revolves \
+         0.76          0.76          0.76          0.76          0.76 \
+       riddle       righted      rightful          rill        roamed \
+         0.76          0.76          0.76          0.76          0.76 \
+       rudely           rue        rugged          ruin       satisfy \
+         0.76          0.76          0.76          0.76          0.76 \
+       school         seeds  selfexistent       sendest         shaft \
+         0.76          0.76          0.76          0.76          0.76 \
+    shoulders       showers          sire          skin         slave \
+         0.76          0.76          0.76          0.76          0.76 \
+      slavery          snap      snatched        solves       soothed \
+         0.76          0.76          0.76          0.76          0.76 \
+souldevouring      southern     southward       spectre   spontaneous \
+         0.76          0.76          0.76          0.76          0.76 \
+    spreading      stations        stores       strains      striking \
+         0.76          0.76          0.76          0.76          0.76 \
+      stunned    subsisting         sweat        sweets         swims \
+         0.76          0.76          0.76          0.76          0.76 \
+         tame       teeming        thrace      toilsome          tops \
+         0.76          0.76          0.76          0.76          0.76 \
+     toucheth         trail       tranced  tranquillity   treacherous \
+         0.76          0.76          0.76          0.76          0.76 \
+     twosided  unassailable      unclosed       unloose     unmingled \
+         0.76          0.76          0.76          0.76          0.76 \
+   unshackled     unstained        untold    unyielding   upspringing \
+         0.76          0.76          0.76          0.76          0.76 \
+       urgeth       vapours     vestibule        vigour         vivid \
+         0.76          0.76          0.76          0.76          0.76 \
+      watered         weave         wheel       whereon     wherewith \
+         0.76          0.76          0.76          0.76          0.76 \
+     whirling      wideopen    widespread         wingd      witchery \
+         0.76          0.76          0.76          0.76          0.76 \
+worldenchaind         zones \
+         0.76          0.76 \
+__________\
+findAssocs(hmdtm, "bright", .9)\
+        bright           abel       admitfor      attending         awaits \
+          1.00           0.92           0.92           0.92           0.92 \
+      beguiled       beguiles       betrayed         bidden  blooddripping \
+          0.92           0.92           0.92           0.92           0.92 \
+     bringerin        burning         chaste         cometh     corruption \
+          0.92           0.92           0.92           0.92           0.92 \
+     displayed        dragons       eastward      enkindled      espousals \
+          0.92           0.92           0.92           0.92           0.92 \
+      forthset      forthshow         goblet       headless            ire \
+          0.92           0.92           0.92           0.92           0.92 \
+      jephthah         joseph         judges         judith       lamblike \
+          0.92           0.92           0.92           0.92           0.92 \
+         lamps         lilies           mend         myriad            ope \
+          0.92           0.92           0.92           0.92           0.92 \
+    oppressing       overhead    perfections         played           post \
+          0.92           0.92           0.92           0.92           0.92 \
+     proposals       rashmade          reply      returning           sake \
+          0.92           0.92           0.92           0.92           0.92 \
+       scorned          seize       selfsame      snowwhite           sobs \
+          0.92           0.92           0.92           0.92           0.92 \
+        spared       staining       stripped       susannah sweetbreathing \
+          0.92           0.92           0.92           0.92           0.92 \
+         torch      traitress transcendental     unhallowed         valour \
+          0.92           0.92           0.92           0.92           0.92 \
+          void     whiterobed          wills          woman           meet \
+          0.92           0.92           0.92           0.92           0.91 \
+          feet \
+          0.90 \
+____________\
+findAssocs(hmdtm, "christ", .4)\
+    christ    chamber    mothers        oil travailing      twere     wicked \
+      1.00       0.51       0.51       0.51       0.51       0.51       0.51 \
+     bride   marriage     spouse      dress     victim bridegroom   spotless \
+      0.50       0.50       0.50       0.47       0.47       0.46       0.45 \
+      base   dwelling       fled      flesh \
+      0.43       0.42       0.42       0.40 \
+_____________\
+findAssocs(hmdtm, "woman", .9)\
+          abel       admitfor      attending         awaits       beguiled \
+          1.00           1.00           1.00           1.00           1.00 \
+      beguiles       betrayed         bidden  blooddripping      bringerin \
+          1.00           1.00           1.00           1.00           1.00 \
+       burning         chaste         cometh     corruption      displayed \
+          1.00           1.00           1.00           1.00           1.00 \
+       dragons       eastward      enkindled      espousals       forthset \
+          1.00           1.00           1.00           1.00           1.00 \
+     forthshow         goblet       headless            ire       jephthah \
+          1.00           1.00           1.00           1.00           1.00 \
+        joseph         judges         judith       lamblike          lamps \
+          1.00           1.00           1.00           1.00           1.00 \
+        lilies           mend         myriad            ope     oppressing \
+          1.00           1.00           1.00           1.00           1.00 \
+      overhead    perfections         played           post      proposals \
+          1.00           1.00           1.00           1.00           1.00 \
+      rashmade          reply      returning           sake        scorned \
+          1.00           1.00           1.00           1.00           1.00 \
+         seize       selfsame      snowwhite           sobs         spared \
+          1.00           1.00           1.00           1.00           1.00 \
+      staining       stripped       susannah sweetbreathing          torch \
+          1.00           1.00           1.00           1.00           1.00 \
+     traitress transcendental     unhallowed         valour           void \
+          1.00           1.00           1.00           1.00           1.00 \
+    whiterobed          wills          woman           meet           feet \
+          1.00           1.00           1.00           0.99           0.98 \
+        purity           type         bright \
+          0.95           0.94           0.92 \
+_______________________________\
+\
+findAssocs(hmdtm, "male", .75)\
+counterpart      female        male   penetrate      shined       hoary \
+       1.00        1.00        1.00        1.00        1.00        0.95 \
+    wisdoms     matters      nature    downward      sprung       fiery \
+       0.87        0.86        0.86        0.81        0.81        0.80 \
+     reigns       limbs        root \
+       0.80        0.78        0.77 \
+__________________\
+\
+findAssocs(hmdtm, "female", .75)\
+counterpart      female        male   penetrate      shined       hoary \
+       1.00        1.00        1.00        1.00        1.00        0.95 \
+    wisdoms     matters      nature    downward      sprung       fiery \
+       0.87        0.86        0.86        0.81        0.81        0.80 \
+     reigns       limbs        root \
+       0.80        0.78        0.77 \
+___________________\
+findAssocs(hmdtm, "virgin", .75)\
+        virgin          lamps           meet           abel       admitfor \
+          1.00           0.78           0.78           0.77           0.77 \
+     attending         awaits       beguiled       beguiles       betrayed \
+          0.77           0.77           0.77           0.77           0.77 \
+        bidden  blooddripping      bringerin        burning         chaste \
+          0.77           0.77           0.77           0.77           0.77 \
+        cometh     corruption      displayed        dragons       eastward \
+          0.77           0.77           0.77           0.77           0.77 \
+     enkindled      espousals       forthset      forthshow         goblet \
+          0.77           0.77           0.77           0.77           0.77 \
+      headless            ire       jephthah         joseph         judges \
+          0.77           0.77           0.77           0.77           0.77 \
+        judith       lamblike         lilies           mend         myriad \
+          0.77           0.77           0.77           0.77           0.77 \
+           ope     oppressing       overhead    perfections         played \
+          0.77           0.77           0.77           0.77           0.77 \
+          post      proposals       rashmade          reply      returning \
+          0.77           0.77           0.77           0.77           0.77 \
+          sake        scorned          seize       selfsame      snowwhite \
+          0.77           0.77           0.77           0.77           0.77 \
+          sobs         spared       staining       stripped       susannah \
+          0.77           0.77           0.77           0.77           0.77 \
+sweetbreathing          torch      traitress transcendental     unhallowed \
+          0.77           0.77           0.77           0.77           0.77 \
+        valour           void     whiterobed          wills          woman \
+          0.77           0.77           0.77           0.77           0.77 \
+          feet           dead \
+          0.76           0.75 \
+__________________________\
+}

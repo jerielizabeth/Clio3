@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Placemark id="feat_2">
+            <name>Grand Rapids, MI</name>
+            <Point id="geom_0">
+                <coordinates>-85.6680863,42.9633599,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_3">
+            <name>New York, NY</name>
+            <Point id="geom_1">
+                <coordinates>-74.0059731,40.7143528,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_4">
+            <name>Philadelphia, PA</name>
+            <Point id="geom_2">
+                <coordinates>-75.163789,39.952335,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Placemark id="feat_2">
+            <name>Nashville,  TN</name>
+            <Point id="geom_0">
+                <coordinates>-86.7833333,36.1666667,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>2008</when></TimeStamp>
+			<description>Baptist Hymnal 2008, LifeWay Worship</description>
+        </Placemark>
+        <Placemark id="feat_3">
+            <name>Carol Stream,  IL</name>
+            <Point id="geom_1">
+                <coordinates>-88.1347927,41.9125286,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>2001</when></TimeStamp>
+			<description>Worship and Rejoice, Hope Publishing Company</description>	
+        </Placemark>
+        <Placemark id="feat_4">
+            <name>St. Louis, MO</name>
+            <Point id="geom_2">
+                <coordinates>-90.1994042,38.6270025,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1995</when></TimeStamp>
+			<description>Chalice Hymnal, Chalice Press</description>
+        </Placemark>
+        <Placemark id="feat_5">
+            <name>Carol Stream, IL</name>
+            <Point id="geom_3">
+                <coordinates>-88.1347927,41.9125286,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1989</when></TimeStamp>
+			<description>Sing Joyfully, Tabernacle Pub. Co.</description>
+        </Placemark>
+        <Placemark id="feat_6">
+            <name>New York, NY</name>
+            <Point id="geom_4">
+                <coordinates>-74.0059731,40.7143528,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1985</when></TimeStamp>
+			<description>Hymnal 1982: according to the use of the Episcopal Church, Church Hymnal Corp.</description>
+        </Placemark>
+        <Placemark id="feat_7">
+            <name>Carol Stream, IL</name>
+            <Point id="geom_5">
+                <coordinates>-88.1347927,41.9125286,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1980</when></TimeStamp>
+			<description>Hymns of Faith, Tabernacle Publishing Company</description>
+        </Placemark>
+        <Placemark id="feat_8">
+            <name>Carol Stream, IL</name>
+            <Point id="geom_6">
+                <coordinates>-88.1347927,41.9125286,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1974</when></TimeStamp>
+			<description>Hymns for the Living Church, Hope Publishing Company</description>        
+		</Placemark>
+        <Placemark id="feat_9">
+            <name>Wheaton,  IL</name>
+            <Point id="geom_7">
+                <coordinates>-88.1070127,41.8661403,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1967</when></TimeStamp>
+			<description>Favorite Hymns of Praise, Hope Publishing Company</description>        
+		</Placemark>
+        <Placemark id="feat_10">
+            <name>Carol Stream, IL</name>
+            <Point id="geom_8">
+                <coordinates>-88.1347927,41.9125286,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1957</when></TimeStamp>
+			<description>Worship and Service Hymnal: For Church, School, and Home, Hope Publishing Company</description>        
+		</Placemark>
+		<Placemark id="feat_2">
+            <name>Grand Rapids, MI</name>
+            <Point id="geom_0">
+                <coordinates>-85.6680863,42.9633599,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1929</when></TimeStamp>
+			<description>The New Christian Hymnal, William B. Eerdmans Pub. Co.</description>
+        </Placemark>
+        <Placemark id="feat_3">
+            <name>New York, NY</name>
+            <Point id="geom_1">
+                <coordinates>-74.0059731,40.7143528,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1916</when></TimeStamp>
+			<description>The Hymnal: as authorized and approved by the General Convention of the Protestant Episcopal Church in the United States of America in the year of our Lord 1916, Church Pension Fund</description>
+        </Placemark>
+        <Placemark id="feat_4">
+            <name>Philadelphia, PA</name>
+            <Point id="geom_2">
+                <coordinates>-75.163789,39.952335,0.0</coordinates>
+            </Point>
+            <TimeStamp><when>1895</when></TimeStamp>
+			<description>The Hymnal: published by the Authority of the General Assembly of the Presbyterian Church in the U.S.A., Presbyterian Board of Publication and Sabbath School Work</description>
+        </Placemark>
+    </Document>
+</kml>

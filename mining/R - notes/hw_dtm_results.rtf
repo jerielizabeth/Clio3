@@ -1,0 +1,134 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Transformations\
+\
+removePunctuation\
+removeNumbers\
+tolower\
+removeWhitespace\
+remove stopwords\
+______\
+\
+hwdtm_rmsparse <- removeSparseTerms(hwdtm, .8) [created dendrogram]\
+> inspect(hwdtm_rmsparse)\
+A document-term matrix (31 documents, 20 terms)\
+\
+Non-/sparse entries: 188/432\
+Sparsity           : 70%\
+Maximal term length: 7 \
+Weighting          : term frequency (tf)\
+\
+blessed christ day earth free god hath heart heaven holy jesus joy \
+life light lord love oer peace rest sin\
+_______\
+findFreqTerms(hwdtm, 10, Inf)\
+ [1] "alleluia" "christ"   "day"      "earth"    "glory"    "god"     \
+ [7] "hath"     "heart"    "heavn"    "holy"     "home"     "hope"    \
+[13] "jesus"    "joy"      "life"     "light"    "lord"     "love"    \
+[19] "name"     "nearer"   "oer"      "peace"    "precious" "rest"    \
+[25] "sweet"   \
+_________\
+findAssocs(hwdtm, "alleluia", .9)\
+     adored    alleluia      aweful        bled  christians     endless \
+       1.00        1.00        1.00        1.00        1.00        1.00 \
+  firstborn forevermore       haste       lives       offer     paschal \
+       1.00        1.00        1.00        1.00        1.00        1.00 \
+        pay        powr      prince  reconciled      reigns        risn \
+       1.00        1.00        1.00        1.00        1.00        1.00 \
+      sheep     sinners       stead   undefiled      victim     victims \
+       1.00        1.00        1.00        1.00        1.00        1.00 \
+    victory        vows        hail \
+       1.00        1.00        0.95 \
+_______\
+findAssocs(hwdtm, "christ", .8)\
+     christ         met     strange     throned      adored    alleluia \
+        1.0         0.9         0.9         0.9         0.8         0.8 \
+     aweful        bled  christians     endless   firstborn forevermore \
+        0.8         0.8         0.8         0.8         0.8         0.8 \
+      haste       lives       offer     paschal         pay        powr \
+        0.8         0.8         0.8         0.8         0.8         0.8 \
+     prince  reconciled      reigns        risn       sheep     sinners \
+        0.8         0.8         0.8         0.8         0.8         0.8 \
+      stead   undefiled      victim     victims     victory        vows \
+        0.8         0.8         0.8         0.8         0.8         0.8 \
+_______\
+\
+findAssocs(hwdtm, "earth", .8)\
+      earth       heavn        name    precious      bowing    complete \
+       1.00        0.94        0.94        0.94        0.93        0.93 \
+      guard       kings   prostrate       round       snare temptations \
+       0.93        0.93        0.93        0.93        0.93        0.93 \
+    thrills     tongues     whereer         joy        hope       sweet \
+       0.93        0.93        0.93        0.91        0.85        0.83 \
+______\
+\
+ findAssocs(hwdtm, "child", .5)\
+      child     falling        hope        look        name      assure \
+       1.00        0.80        0.70        0.63        0.59        0.56 \
+     betray       birds        blue        book      bowing      change \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+   complete        deed         ere       fancy  flattering      flower \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+       fond     forever  fulfilment     gainsay        goal       grass \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+      guard   handiwork       kings       leads      leaves      little \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+       lure        mans        neer     picture       plant     prompts \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+  prostrate   rejoicing      remain       round      secure        seen \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+      snare       spoke       story   struggles    sunshine temptations \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+    thrills        tiny     tongues     towards       trust        wave \
+       0.56        0.56        0.56        0.56        0.56        0.56 \
+       weak     whereer     written       earth       heavn    precious \
+       0.56        0.56        0.56        0.55        0.55        0.53 \
+______\
+findAssocs(hwdtm, "children", .5)\
+      children        flowing          glory        arrayed           band \
+          1.00           0.94           0.82           0.80           0.80 \
+        bathed       dwelling           fade          flood       forgiven \
+          0.80           0.80           0.80           0.80           0.80 \
+          joys          robes       spotless      thousands           wash \
+          0.80           0.80           0.80           0.80           0.80 \
+       singing          white          blood          stand        brought \
+          0.76           0.70           0.63           0.62           0.53 \
+         clean        cleanse    everlasting         sought        approve \
+          0.53           0.53           0.53           0.53           0.51 \
+        astray          bosom        carried      constrain         danger \
+          0.51           0.51           0.51           0.51           0.51 \
+        direct       directed           easy          folly         fondly \
+          0.51           0.51           0.51           0.51           0.51 \
+        gentle          glide       instruct           join          leave \
+          0.51           0.51           0.51           0.51           0.51 \
+          lest           lips           lisp        mingled           prey \
+          0.51           0.51           0.51           0.51           0.51 \
+       protect       shepherd         sinful   strengthened       supplied \
+          0.51           0.51           0.51           0.51           0.51 \
+        taught         tended         tender thankofferings      unfeigned \
+          0.51           0.51           0.51           0.51           0.51 \
+          walk          water           wear        whateer           word \
+          0.51           0.51           0.51           0.51           0.51 \
+          yoke \
+          0.51 \
+___________\
+\
+findAssocs(hwdtm, "beloved", .5)\
+   beloved      cloud       afar     delved        dew     dreary    floated \
+      1.00       0.94       0.90       0.90       0.90       0.90       0.90 \
+      gift     giveth       gold       heap       hill      makes      music \
+      0.90       0.90       0.90       0.90       0.90       0.90       0.90 \
+    mutely     noises   overhead  psalmists    saileth    silence      slope \
+      0.90       0.90       0.90       0.90       0.90       0.90       0.90 \
+surpassing    wailers    wailing      sleep      borne      curse       drop \
+      0.90       0.90       0.90       0.70       0.61       0.61       0.61 \
+      reap     softly       tell     voices \
+      0.61       0.61       0.61       0.61 \
+_______\
+\
+*Note - there were no instances of woman, man, wife, husband, virgin, etc in these texts\
+}
